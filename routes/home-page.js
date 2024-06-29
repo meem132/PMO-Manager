@@ -3,7 +3,7 @@ let router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res) {
-  res.render('home-page', { title: 'Task Management App' });
+  res.render('home-page', { title: 'PMO Task Management App' });
 });
 
 
