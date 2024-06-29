@@ -6,11 +6,28 @@ const cookieParser = require('cookie-parser');
 const bodyParser = require('body-parser');
 //db configuration
 const mongoose = require('mongoose');
+
+const dbURI = 'mongodb+srv://PMO:P@ssw0rd@clusterpm0.hw7qq7o.mongodb.net/?retryWrites=true&w=majority&appName=ClusterPM0';
+
+mongoose.connect(dbURI, {
+  useNewUrlParser: true,
+  useUnifiedTopology: true
+})
+.then(() => {
+  console.log('Connected to MongoDB ');
+  // Start your application or other setup here
+})
+.catch(err => {
+  console.error('Error connecting to MongoDB :', err);
+});
+
+/*const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
 //mongodb hosted on AWS by mLab
 mongoose.connect('mongodb://Hari615:Hari_416@ds117199.mlab.com:17199/task-management')
    .then(() => console.log('connection successful'))
    .catch((err)=> console.error(err));
+*/
 let app = express();
 let port = process.env.PORT || 3000;
 let tasks = require('./routes/tasks');
