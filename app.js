@@ -7,14 +7,21 @@ const bodyParser = require('body-parser');
 //db configuration
 const mongoose = require('mongoose');
 
+const dbURI = 'mongodb+srv://PMO:P@ssw0rd@clusterpm0.hw7qq7o.mongodb.net/?retryWrites=true&w=majority&appName=ClusterPM0';
+mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
+  .then(() => console.log('MongoDB connected...'))
+  .catch(err => console.log(err));
+/*
+const mongoose = require('mongoose');
+
 // Replace with your MongoDB Atlas URI
 const dbURI = 'mongodb+srv://PMO:P@ssw0rd@clusterpm0.hw7qq7o.mongodb.net/?retryWrites=true&w=majority&appName=ClusterPM0';
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(() => console.log('MongoDB connected...'))
  // Start your server or any other application logic here
-}).catch((err) => {
+.catch((err) => {
   console.error('Error connecting to MongoDB:...', err.message);
-});
+}); */
 
 /*const mongoose = require('mongoose');
 mongoose.Promise = global.Promise;
