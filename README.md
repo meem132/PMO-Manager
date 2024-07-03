@@ -1,4 +1,4 @@
-# Task-management-app
+# PMO-Manager-app
 ## Description:
 
 This app is a Full Stack Java Script App and also a PMO Web Application, which helps to schedule,assign,plan and manage the tasks.
