@@ -22,7 +22,7 @@ This app is a Full Stack Java Script App and also a PMO Web Application, which h
 * JSON , PMO Operations
 
 ### Deployment
-* Heroku
+* Glitch
 
 ### Tools
 Atom, SourceTree,cmd, version control system : GIT, 
